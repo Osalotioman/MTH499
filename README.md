@@ -98,4 +98,4 @@ pdflatex main.tex
 
 ## License
 
-This template is provided as-is for educational purposes.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
