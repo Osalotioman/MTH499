@@ -1,0 +1,79 @@
+% Shared LaTeX setup for the thesis
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{amsmath,amssymb,amsthm,amsfonts,mathtools}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\graphicspath{{./images/}}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{fmtcount}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{fouriernc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+\setlength{\headheight}{14.5pt}
+
+\titleformat{\chapter}[display]{\bfseries\centering\Large}{\MakeUppercase{\chaptername\ \thechapter}}{1ex}{\MakeUppercase}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  commentstyle=\color{green!50!black},
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=8pt,
+  frame=single,
+  breaklines=true,
+  showstringspaces=false,
+  captionpos=b
+}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\renewcommand{\qedsymbol}{$\square$}
+
+% Signature block macro: left-aligns the name (start at left of block)
+% and centers the role in parentheses directly under the name text.
+\newlength{\signnamewidth}
+\newcommand{\signatureblock}[2]{%
+  \noindent
+  \begin{minipage}[t]{0.6\textwidth}
+    \raggedright
+    % measure the name width and typeset a parbox of that width so the
+    % role can be centered beneath it
+    \settowidth{\signnamewidth}{#1}%%
+    \parbox{\signnamewidth}{#1}\\[-0.5ex]
+    {\small\makebox[\signnamewidth][c]{(#2)}}%
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \raggedleft
+    Date: \rule{4cm}{0.4pt}
+  \end{minipage}
+}
