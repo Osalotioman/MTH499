@@ -2,34 +2,37 @@
 
 \section{How to Organize the Review}
 
-Group the literature by theme, method, chronology, or level of abstraction, depending on what best supports the argument of the thesis.
+Group the literature by theme, method, chronology, or level of abstraction, depending on what best supports the argument of the thesis. Ensure that every claim regarding historical development or thematic shifts is anchored by a relevant citation (e.g., \cite{knuth1984, lamport1994}).
 
 \section{What to Include}
 
 \begin{itemize}
-    \item Foundational results that define the topic.
-    \item Recent papers or tools that motivate the project.
-    \item Gaps or limitations that the current work addresses.
+    \item Foundational results that define the topic (e.g., see the seminal work by \cite{shannon1948}).
+    \item Recent papers, frameworks, or tools that motivate the project.
+    \item Gaps or limitations in current literature that the current work addresses.
 \end{itemize}
 
 \section{Comparative Summary}
 
-Use this section for a short synthesis table or a narrative comparison of the main references.
+Use this section for a short synthesis table or a narrative comparison of the main references. Remember to explicitly cite the authors in the first column of the summary table.
 
 \begin{table}[h!]
 \centering
 \caption{Template for comparing related work}
 \label{tab:related-work-template}
-\begin{tabular}{lll}
+% 'X' columns will automatically calculate width and wrap text. 
+% 'l' keeps the reference column tight to its content.
+\begin{tabularx}{\textwidth}{lXX}
 \toprule
-Reference & Main idea & Relevance \\
+Reference & Main Idea & Relevance \\
 \midrule
-Author A & Method or finding & Why it matters \\
-Author B & Method or finding & Why it matters \\
+Knuth \cite{knuth1984}   & Fundamental literate programming  & Establishes documentation baseline \\
+Lamport \cite{lamport1994} & Document preparation systems     & Contextualizes modern typesetting \\
+Shannon \cite{shannon1948} & Mathematical theory of communication & Foundation for information metrics \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \section{Summary}
 
-Conclude the chapter with the main patterns, disagreements, and open questions identified in the literature.
+Conclude the chapter with a synthesis of the main patterns, disagreements, and open questions identified in the literature, explicitly reiterating how these gaps justify the scope of this project.
