@@ -1,0 +1,43 @@
+% Common macros and theorem environments.
+% This file should contain reusable mathematical notation,
+% theorem-style environments, and project-specific commands.
+%
+% Presentation-related settings (packages, page layout,
+% typography, headers/footers, listings configuration, etc.)
+% should remain in preamble.tex.
+
+% ------------------------------------------------------------------
+% Theorem environments
+% ------------------------------------------------------------------
+
+\theoremstyle{plain}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheorem{metatheorem}[theorem]{Metatheorem}
+\newtheorem{metametatheorem}[theorem]{Meta-metatheorem}
+
+\numberwithin{theorem}{chapter}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+% ------------------------------------------------------------------
+% Common mathematical notation
+% ------------------------------------------------------------------
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+% ------------------------------------------------------------------
+% Project-specific macros
+% Add additional commands below as required.
+% ------------------------------------------------------------------
